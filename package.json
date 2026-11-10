@@ -1,0 +1,60 @@
+{
+  "name": "pi-voxifer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "dictado",
+    "voz",
+    "speech-to-text",
+    "sherpa-onnx"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/extension/pi-voxifer.ts"
+    ]
+  },
+  "scripts": {
+    "test": "node --test \"tests/*.test.mjs\"",
+    "typecheck": "tsc --noEmit",
+    "smoke": "node scripts/smoke.mjs",
+    "comparar": "node scripts/comparar.mjs",
+    "benchmark": "node scripts/benchmark-asr.mjs"
+  },
+  "dependencies": {
+    "decibri": "^5.8.0"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.6.0"
+  },
+  "optionalDependencies": {
+    "sherpa-onnx-node": "^1.13.0"
+  },
+  "description": "Dictado por voz para pi: grabás, transcribe un modelo local y el texto cae en el editor sin enviarse",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AldereteSergio/pi-voxifer.git"
+  },
+  "files": [
+    "src/",
+    "assets/",
+    "docs/instalacion.md",
+    "README.md",
+    "LICENSE",
+    "tools/"
+  ]
+}
